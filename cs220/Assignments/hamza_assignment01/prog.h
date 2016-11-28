@@ -1,7 +1,7 @@
 /* 
  * Function that accepts integer "n" as input and returns nth fibonacci number. 
  */ 
-int nthFib(int n);
+unsigned int nthFib(unsigned int n);
 
 /*
  * Function that returns square of a minus square of b
