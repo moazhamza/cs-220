@@ -1,8 +1,10 @@
 #include "prog.h"
 
 
-/* Function returns the nth term in the Fibinocci sequence through a recursive algorithm */
-int nthFib(int n)
+/* Function returns the nth term in the Fibinocci sequence through a recursive algorithm.
+ * Input must be between 1 and 30. Fibbinocci sequence not defined for x < 0
+ * Returns -1 for bad input */
+unsigned int nthFib(unsigned int n)
 {
     /* Question 1: Implement function. */
     if (n < 1 || n > 30)  return -1;
