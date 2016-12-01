@@ -10,7 +10,7 @@
 5. The value is not 1 becuase the program forks into 2 seperate process. It has no knowledge of the x in the other fork being changed. All it knows is that x is 1 at the time of the fork.
 
 
-3 Multiple fork()'s
+3. Multiple fork()'s
 
 1. Line was printed 14 times. After the first fork, there are two processes. Each of those forks print line 1. Then there is a fork in each of the two processes, 4 processes in total. So Line 2 is printed four times. Then another fork happens in each of those processes. Thus 4 more processes are created, for a total of 8. If the process is a newly created process (i.e. a child of the 4 existing processes), Line 3 is printed. Otherwise if the process is a pre-existing process, Line 4 is printed.
 
