@@ -1,16 +1,49 @@
-1. The order does not change. It could change due to the order of when processes are run.
+2. Single fork()
 
-2. The child now always prints before the parent
+	1. The order does not change. It could change due to the order of when processes are run.
 
-3. They are the same since in child it prints the parent and in the parent it prints its own pid
+	2. The child now always prints before the parent
+
+	3. They are the same since in child it prints the parent and in the parent it prints its own pid
 	17392, 17392
 
-4. The value of the parent's parent process id is 16976. This value is unchanged (It is most likely the terminal).The value of child's process id is 17504 which is the parent's pid
+	4. The value of the parent's parent process id is 16976. This value is unchanged (It is most likely the terminal).The value of child's process id is 17504 which is the parent's pid
 
-5. The value is not 1 becuase the program forks into 2 seperate process. It has no knowledge of the x in the other fork being changed. All it knows is that x is 1 at the time of the fork.
+	5. The value is not 1 becuase the program forks into 2 seperate process. It has no knowledge of the x in the other fork being changed. All it knows is that x is 1 at the time of the fork.
 
 
 3. Multiple fork()'s
 
-1. Line was printed 14 times. After the first fork, there are two processes. Each of those forks print line 1. Then there is a fork in each of the two processes, 4 processes in total. So Line 2 is printed four times. Then another fork happens in each of those processes. Thus 4 more processes are created, for a total of 8. If the process is a newly created process (i.e. a child of the 4 existing processes), Line 3 is printed. Otherwise if the process is a pre-existing process, Line 4 is printed.
+	1. Line was printed 14 times. After the first fork, there are two processes. Each of those forks print line 1. Then there is a fork in each of the two processes, 4 processes in total. So Line 2 is printed four times. Then another fork happens in each of those processes. Thus 4 more processes are created, for a total of 8. If the process is a newly created process (i.e. a child of the 4 existing processes), Line 3 is printed. Otherwise if the process is a pre-existing process, Line 4 is printed.
 
+	2. 
+10554: 9989: Line 1
+10554: 9989: Line 2
+10554: 9989: Line 4
+10555: 10554: Line 1
+10555: 10554: Line 2
+10555: 10554: Line 4
+10555: 10554: Line 1
+10555: 10554: Line 2
+10559: 10555: Line 3
+10554: 9989: Line 1
+10554: 9989: Line 2
+10557: 10554: Line 3
+10554: 9989: Line 1
+10556: 10554: Line 2
+10556: 10554: Line 4
+10555: 10554: Line 1
+10558: 10555: Line 2
+10558: 10555: Line 4
+10554: 9989: Line 1
+10556: 10554: Line 2
+10560: 10556: Line 3
+10555: 10554: Line 1
+10558: 10555: Line 2
+10561: 10558: Line 3
+
+When run through the terminal, if a child is orphaned, it's parent id becomes the OS, thus it's pid is 1. However, this output does not occur if the results are automatically appended to the lab13.txt (Using ./multifork >> lab13.txt) 
+
+4. exec()
+	Child pid = 23838, parent pid = 23837
+	My pid is 23838, parent pid is 23837

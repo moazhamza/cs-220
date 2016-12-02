@@ -3,10 +3,10 @@
 
 int main(){
 	fork();
-	printf("Line 1\n");
+	printf("%u: %u: Line 1\n", getpid(), getppid());
 	fork();
-	printf("Line 2\n");
-	if (fork() == 0) printf("Line 3\n");
-	else printf("Line 4\n");
+	printf("%u: %u: Line 2\n", getpid(), getppid());
+	if (fork() == 0) printf("%u: %u: Line 3\n", getpid(), getppid());
+	else printf("%u: %u: Line 4\n", getpid(), getppid());
 	return 0;
 }
