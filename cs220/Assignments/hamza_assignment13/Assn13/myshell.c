@@ -5,6 +5,11 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+
+
+/*
+ * Creates an array of args from the string of args seperated by spaces
+ */
 char **set_up_args(char *str, char **args){
     int i, j=0;
     i = 0;
@@ -23,7 +28,8 @@ char **set_up_args(char *str, char **args){
     args[j+1] = NULL;
     return args;
 }
-/* Returns the second argument if it exists,
+/*
+ * Returns the second argument if it exists,
  * returns 0 if there is no second argument.
  */
 char *set_up_second_command(char *line, char *secondCommand){
