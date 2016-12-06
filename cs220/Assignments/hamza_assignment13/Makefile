@@ -1,4 +1,4 @@
 all:
-	gcc shell.c -std=c89 -o shell -g
+	gcc myshell.c -std=c89 -o myshell -g
 clean:
-	rm -f shell
+	rm -f myshell
