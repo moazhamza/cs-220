@@ -1,0 +1,8 @@
+Address of student = 0x7fffffffe630
+Address of dummy = 0x7fffffffe61c
+
+Address of 'J': 0x4006c0
+
+Address bad returns to: 0x0000000000400654
+
+stack return address: 0x7fffffffe5d0

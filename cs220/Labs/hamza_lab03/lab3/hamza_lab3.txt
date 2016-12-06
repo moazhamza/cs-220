@@ -1,0 +1,43 @@
+
+1.	Secret 1 = 0xdeadbeef
+	Secret 2 = 0xdeadc0de 
+	Secret 3 = $0xbadc0de 
+	Secret 4 = 0xbadbeef5 
+
+2. 	gfoo at 0x601040
+	sfoo at 0x601048
+	lfoo at 0x7fffffffe624
+	dfoo at 0x7fffffffe628
+
+3. 	dfoo = 0x602010
+
+4. 	Start address of stack- 0x7ffffffde000
+	End address of stack- 0x7ffffffff000 
+	
+	Start address of heap- 0x602000                                
+      	End address of heap- 0x623000
+
+	Start address of data section - 0x0000000000601030 
+	End address of data section - 0x0000000000601044
+
+Size of binary for global_vars.c:
+	x = 10: 6.8 KB
+	x = 100: 6.9 KB
+	x = 1000: 7.8 KB
+	x = 10000: 19.2 KB
+
+Size of binary for malloc_vars.c:
+	x = 10: 6.8 KB
+	x = 100: 6.8 KB
+	x = 1000: 6.8 KB
+	x = 10000: 6.8 KB
+
+Program did not crash regardless of how much memory was allocated. 
+
+Size of binary for static_vars.c
+	x = 10: 6.6 KB
+	x = 100: 6.6 KB
+	x = 1000: 6.6 KB
+	x = 10000: 6.6 KB
+
+Heap size did not change.

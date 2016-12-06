@@ -10,4 +10,4 @@ prog_lab.o: prog_lab.c
 	$(CC) $(CFLAGS) prog_lab.c
 
 clean:
-	rm prog_lab.o lab1
+	rm -f prog_lab.o lab1

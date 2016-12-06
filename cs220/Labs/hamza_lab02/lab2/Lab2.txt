@@ -1,0 +1,36 @@
+	
+3. Performance of loops
+
+	1. Number of iterations of each of for, while and do-while loops per second.
+
+	forLoop  - 505050505.050505 iterations per second
+	whileLoop - 458715596.330275 iterations per second
+	doWhileLoop -  452488687.782805 iterations per second
+
+
+	2. Average time of 3 trials where n = 1000000000 for each of the 3 loops.
+
+	forLoop - 1.980000
+	whileLoop - 2.123333
+	doWhileLoop - 2.173333
+
+	3. Number of instructions in each of the 3 functions.
+
+	forLoop - 10 instructions
+	whileLoop - 8 instructions
+	doWhileLoop - 7 instructions
+
+	4. 2-3 sentences explaining why you think one type of loop runs faster than the other.
+
+	For loops run faster than the other types of loops because they don't have to constantly check if 		the condition was met every single iteration. They have an exact of how many times they will they 		will be executing the body of the loop and thus can skip the check of the termination of the 		loop. While and do while must check everytime because they run a number of times that is not 		known to the compiler.
+
+4. Examining the dependencies of loop program
+
+
+	linux-vdso.so.1 =>  (0x00007ffc9b6ef000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f1ebc584000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f1ebc911000)
+
+
+
+

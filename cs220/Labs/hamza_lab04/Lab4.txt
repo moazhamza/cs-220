@@ -1,0 +1,95 @@
+2. p1 and p2 can be incremented but the values at those addresses (*p1, *p2)
+	cannot be incremented because they are read only values.
+
+3.	Value of ptr: 55
+	Value of ptr: 48
+	Value of ptr: 89
+	Value of ptr: e5
+	Value of ptr: 48
+	Value of ptr: 83
+	Value of ptr: ec
+	Value of ptr: 10
+	Value of ptr: 48
+	Value of ptr: c7
+	Value of ptr: 45
+	Value of ptr: f8
+	Value of ptr: c
+	Value of ptr: 5
+	Value of ptr: 40
+	Value of ptr: 0
+	Value of ptr: 48
+	Value of ptr: 8b
+	Value of ptr: 45
+	Value of ptr: f8
+	Value of ptr: f
+	Value of ptr: b6
+	Value of ptr: 0
+	Value of ptr: f
+	Value of ptr: b6
+	Value of ptr: c0
+	Value of ptr: 89
+	Value of ptr: c6
+	Value of ptr: bf
+	Value of ptr: fc
+	Value of ptr: 5
+	Value of ptr: 40
+	Value of ptr: 0
+	Value of ptr: b8
+	Value of ptr: 0
+	Value of ptr: 0
+	Value of ptr: 0
+	Value of ptr: 0
+	Value of ptr: e8
+	Value of ptr: a9
+	Value of ptr: fe
+	Value of ptr: ff
+	Value of ptr: ff
+	Value of ptr: 48
+	Value of ptr: 83
+	Value of ptr: 45
+	Value of ptr: f8
+	Value of ptr: 1
+	Value of ptr: 48
+	Value of ptr: 8b
+	Value of ptr: 45
+	Value of ptr: f8
+	Value of ptr: f
+	Value of ptr: b6
+	Value of ptr: 0
+	Value of ptr: 3c
+
+objdump:
+
+	  40050c:	55                   	push   %rbp
+	  40050d:	48 89 e5             	mov    %rsp,%rbp
+	  400510:	48 83 ec 10          	sub    $0x10,%rsp
+	  400514:	48 c7 45 f8 0c 05 40 	movq   $0x40050c,-0x8(%rbp)
+	  40051b:	00 
+	  40051c:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+	  400520:	0f b6 00             	movzbl (%rax),%eax
+	  400523:	0f b6 c0             	movzbl %al,%eax
+	  400526:	89 c6                	mov    %eax,%esi
+	  400528:	bf fc 05 40 00       	mov    $0x4005fc,%edi
+	  40052d:	b8 00 00 00 00       	mov    $0x0,%eax
+	  400532:	e8 a9 fe ff ff       	callq  4003e0 <printf@plt>
+	  400537:	48 83 45 f8 01       	addq   $0x1,-0x8(%rbp)
+	  40053c:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+	  400540:	0f b6 00             	movzbl (%rax),%eax
+	  400543:	3c c3                	cmp    $0xc3,%al
+	  400545:	75 d5                	jne    40051c <main+0x10>
+	  400547:	c9                   	leaveq 
+	  400548:	c3                   	retq   
+	  400549:	90                   	nop
+	  40054a:	90                   	nop
+	  40054b:	90                   	nop
+	  40054c:	90                   	nop
+	  40054d:	90                   	nop
+	  40054e:	90                   	nop
+	  40054f:	90                   	nop
+
+
+If you attempt to change the instruction in the main, you will get a segmentation fault.
+
+
+4. 
+

@@ -1,0 +1,57 @@
+No optimization
+10:
+	ASM:  0 sec, 000001 micro sec
+	C:  0 sec, 000000 micro sec
+
+100:
+	ASM:  0 sec, 000001 micro sec
+	C:  0 sec, 000002 micro sec
+
+1000:
+	ASM:  0 sec, 000004 micro sec
+	C:  0 sec, 000011 micro sec
+
+10000:
+	ASM:  0 sec, 000038 micro sec
+	C:  0 sec, 000085 micro sec
+
+100000:
+	ASM:  0 sec, 000398 micro sec
+	C:  0 sec, 000920 micro sec
+
+1000000:
+	ASM:  0 sec, 003211 micro sec
+	C:  0 sec, 006698 micro sec
+
+Optimization
+
+10:
+	ASM:  0 sec, 000000 micro sec
+	C:  0 sec, 000001 micro sec
+100:
+	ASM:  0 sec, 000000 micro sec
+	C:  0 sec, 000001 micro sec
+1000:
+	ASM:  0 sec, 000005 micro sec
+	C:  0 sec, 000004 micro sec
+10000:
+	ASM:  0 sec, 000041 micro sec
+	C:  0 sec, 000044 micro sec
+100000:
+	ASM:  0 sec, 000412 micro sec
+	C:  0 sec, 000424 micro sec
+1000000:
+	ASM:  0 sec, 003347 micro sec
+	C:  0 sec, 003261 micro sec
+
+reverse_asm can be made faster by using test rather than cmp since byte 
+operations are quicker than arithmetic operations.
+
+Without optimization:
+# of instructions in reverse_c = 35 instructions
+# of instructions in reverse_asm = 10 instructions
+
+
+With optimization
+# of instructions in reverse_c = 19 instructions
+# of instructions in reverse_asm = 9 instructions 

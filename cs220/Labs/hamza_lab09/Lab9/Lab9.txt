@@ -1,0 +1,17 @@
+4: HDD ACCESS:  2 sec, 895472 micro sec
+32: HDD ACCESS:  0 sec, 397215 micro sec
+128: HDD ACCESS:  0 sec, 140522 micro sec
+1024: HDD ACCESS:  0 sec, 029236 micro sec
+1: MEM SERIAL ACCESS:  0 sec, 005910 micro sec
+   MEM PAGE STEP ACCESS:  0 sec, 018752 micro sec
+   817      page-faults               #    0.033 M/sec                  
+4: MEM SERIAL ACCESS:  0 sec, 022784 micro sec
+   MEM PAGE STEP ACCESS:  0 sec, 058361 micro sec
+   3,123      page-faults               #    0.039 M/sec                 
+32: MEM SERIAL ACCESS:  0 sec, 134225 micro sec
+    MEM PAGE STEP ACCESS:  0 sec, 538024 micro sec
+    24,641      page-faults               #    0.036 M/sec                  
+128: MEM SERIAL ACCESS:  0 sec, 366193 micro sec
+     MEM PAGE STEP ACCESS:  2 sec, 137939 micro sec
+     98,417      page-faults               #    0.038 M/sec                  
+

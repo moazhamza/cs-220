@@ -1,0 +1,18 @@
+Allocating 40 bytes... 
+Successfully allocated at 0x1166010
+free()ing memory at 0x1166010...DONE
+
+Address of <logger_malloc> = 0x4005ec
+Address of <logger_free> = 0x400649
+
+./main_shared: error while loading shared libraries: libshared.so: cannot open shared object file: No such file or directory
+
+linux-vdso.so.1 =>  (0x00007ffc5996e000)
+	libshared.so => /home/mhamza1/cs220/Labs/hamza_lab7/lib/libshared.so (0x00007f2e1f5b9000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f2e1f22c000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f2e1f7ba000)
+
+linux-vdso.so.1 =>  (0x00007ffda1d77000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f57bb73d000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f57bbaca000)
+
