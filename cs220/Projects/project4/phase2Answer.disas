@@ -1,29 +1,8 @@
-a.out:     file format elf32-i386
 
-
-Disassembly of section .init:
+phase2Answer:     file format elf32-i386
 
 Disassembly of section .text:
 
-08048330 <main>:
- 8048330:	8d 4c 24 04          	lea    ecx,[esp+0x4]
- 8048334:	83 e4 f0             	and    esp,0xfffffff0
- 8048337:	ff 71 fc             	push   DWORD PTR [ecx-0x4]
- 804833a:	55                   	push   ebp
- 804833b:	89 e5                	mov    ebp,esp
- 804833d:	51                   	push   ecx
- 804833e:	83 ec 0c             	sub    esp,0xc
- 8048341:	68 cf 00 00 00       	push   0xcf
- 8048346:	68 e0 84 04 08       	push   0x80484e0
- 804834b:	e8 b0 ff ff ff       	call   8048300 <printf@plt>
- 8048350:	8b 4d fc             	mov    ecx,DWORD PTR [ebp-0x4]
- 8048353:	31 c0                	xor    eax,eax
- 8048355:	c9                   	leave  
- 8048356:	8d 61 fc             	lea    esp,[ecx-0x4]
- 8048359:	c3                   	ret    
- 804835a:	90                   	nop
- 804835b:	90                   	nop
- 
 0804843c <func>:
  804843c:	55                   	push   ebp
  804843d:	89 e5                	mov    ebp,esp
@@ -40,3 +19,4 @@ Disassembly of section .text:
  804844d:	90                   	nop
  804844e:	90                   	nop
  804844f:	90                   	nop
+ 80484d6:	c3                   	ret    
