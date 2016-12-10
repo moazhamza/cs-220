@@ -799,7 +799,7 @@ Disassembly of section .text:
  8048f2c:	e8 0f f7 ff ff       	call   8048640 <puts@plt>
  8048f31:	e8 a6 f8 ff ff       	call   80487dc <explode>
  8048f36:	eb 08                	jmp    8048f40 <func_1220+0xe6>
- 8048f38:	e8 9f f8 ff ff       	call   80487dc <explode>
+ :8048f38:	e8 9f f8 ff ff       	call   80487dc <explode>
  8048f3d:	90                   	nop
  8048f3e:	eb 01                	jmp    8048f41 <func_1220+0xe7>
  8048f40:	90                   	nop
@@ -810,11 +810,11 @@ Disassembly of section .text:
  8048f43:	55                   	push   ebp
  8048f44:	89 e5                	mov    ebp,esp
  8048f46:	81 ec 38 04 00 00    	sub    esp,0x438
- 8048f4c:	c7 44 24 08 00 04 00 	mov    DWORD PTR [esp+0x8],0x400
+ 8048f4c:	c7 44 24 08 00 04 00 	mov    DWORD PTR [esp+0x8],0x400  : int v2 = 0x400;
  8048f53:	00 
- 8048f54:	c7 44 24 04 00 00 00 	mov    DWORD PTR [esp+0x4],0x0
+ 8048f54:	c7 44 24 04 00 00 00 	mov    DWORD PTR [esp+0x4],0x0	: int v1 = 0;
  8048f5b:	00 
- 8048f5c:	8d 85 e4 fb ff ff    	lea    eax,[ebp-0x41c]
+ 8048f5c:	8d 85 e4 fb ff ff    	lea    eax,[ebp-0x41c] 
  8048f62:	89 04 24             	mov    DWORD PTR [esp],eax
  8048f65:	e8 46 f7 ff ff       	call   80486b0 <memset@plt>
  8048f6a:	c7 44 24 04 00 10 00 	mov    DWORD PTR [esp+0x4],0x1000
@@ -916,7 +916,7 @@ Disassembly of section .text:
  80490ce:	83 7d f4 00          	cmp    DWORD PTR [ebp-0xc],0x0
  80490d2:	75 05                	jne    80490d9 <phase2+0x46>
  80490d4:	e8 03 f7 ff ff       	call   80487dc <explode>
- 80490d9:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+ 80490d9:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc] : eax = 
  80490dc:	89 45 f0             	mov    DWORD PTR [ebp-0x10],eax
  80490df:	c7 44 24 04 cd 00 00 	mov    DWORD PTR [esp+0x4],0xcd
  80490e6:	00 
